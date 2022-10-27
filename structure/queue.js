@@ -1,4 +1,4 @@
-/* Queue.js */
+/* queue.js */
 let queue = [];
 let front = -1;
 let rear = -1;
