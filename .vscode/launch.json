@@ -13,10 +13,20 @@
       "env": {
         "fileExtname": "${fileExtname}",
         "file": "${file}",
-        "url": "http://localhost:3000/${relativeFile}"
+        "url": "http://127.0.0.1:3000/${relativeFile}"
       },
       "outputCapture": "std",
       "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "name": "Clean",
+      "program": "${workspaceFolder}/.vscode/clean.js",
+      "args": ["${relativeFile}"],
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
       "type": "node"
     }
   ]

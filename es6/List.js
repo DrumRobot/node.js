@@ -7,10 +7,21 @@ class List {
       this[i] = args[i];
     }
   }
+  /** callback 함수가 true를 반환하는 값들의 배열 반환 */
+  filter(callback) {
+    const result = [];
+    for (let i = 0; i < this.length; i++) {
+      let value = this[i];
+      if (callback(value, i, this)) {
+        result.push(value)
+      }
+    }
+    return result;
+  }
   /** this의 모든 요소에 대해서 callback 실행 */
   forEach(callback) {
     for (let i = 0; i < this.length; i++) {
-      callback(this[i]);
+      callback(this[i], i, this);
     }
   }
   /** callback 함수를 this의 모든 요소에 대해 실행한 결과 반환 */
