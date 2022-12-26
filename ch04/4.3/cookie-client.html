@@ -1,0 +1,6 @@
+<!-- node.js/ch04/4.3/cookie-client.html -->
+<h1>Hello Cookie</h1>
+<script>
+  cookieStore.get('mycookie').then(console.log); // 쿠키 정보 출력
+  cookieStore.set('client', new Date().toDateString()); // 쿠키 저장
+</script>
