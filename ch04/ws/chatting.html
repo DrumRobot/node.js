@@ -1,0 +1,19 @@
+<!-- node.js/ch04/ws/chatting.html -->
+<form name="publish">
+  <input type="text" name="message" autocomplete="off" maxlength="50">
+  <input type="submit" value="전송">
+</form>
+<div id="messages"></div>
+
+<script>
+  let socket = new WebSocket("ws://localhost:8888");
+  socket.onmessage = (event) => {
+    window.messages.innerHTML += `<div>${event.data}</div>`;
+  };
+
+  document.forms.publish.onsubmit = function () {
+    socket.send(this.message.value);
+    this.message.value = '';
+    return false; // form이 submit 되는 것을 방지
+  };
+</script>

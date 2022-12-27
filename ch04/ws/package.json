@@ -1,0 +1,6 @@
+{
+  "main": "chatting.js",
+  "dependencies": {
+    "ws": "^8.11.0"
+  }
+}
