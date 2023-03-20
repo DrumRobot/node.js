@@ -9,6 +9,7 @@
       "request": "launch",
       "runtimeArgs": ["${workspaceFolder}/.vscode/launch.sh", "${file}"],
       "runtimeExecutable": "bash",
+      "console": "integratedTerminal",
       "cwd": "${fileDirname}",
       "env": {
         "fileExtname": "${fileExtname}",

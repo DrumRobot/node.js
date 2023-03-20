@@ -9,7 +9,7 @@ module.exports = {
     SharedArrayBuffer: "readonly",
   },
   parserOptions: {
-    ecmaVersion: 2017, // es8
+    ecmaVersion: 2020, // es11, Node 14.0.0
     sourceType: "module",
   },
   rules: {},
